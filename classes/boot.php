@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-require_once './config.php';
-
 $capsule = new Capsule;
 $capsule->addConnection([
   'driver' => 'mysql',

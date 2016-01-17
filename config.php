@@ -1,7 +1,7 @@
 <?php
 
 $dbhost = "localhost";
-$db = "confluence";
+$db = "foodweb";
 $username = "root";
 $dbpass = "";
 

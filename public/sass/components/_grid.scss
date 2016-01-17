@@ -61,7 +61,7 @@
       $perc: unquote((100 / ($num-cols / $i)) + "%");
       &.s#{$i} {
         width: $perc;
-        margin-left: 0;
+      /*  margin-left: 0; check if this hack cause any problem */
       }
       &.offset-s#{$i} {
         margin-left: $perc;

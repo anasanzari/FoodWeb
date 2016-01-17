@@ -3,6 +3,17 @@
     src:url('../fonts/OpenSans-Regular.ttf');
 }
 
+@font-face{
+    font-family: titlefont;
+    src:url('../fonts/master_of_break.ttf');
+}
+
+@font-face{
+    font-family: subtitlefont;
+    src:url('../fonts/raisin_des_sables.ttf');
+}
+
+
 *{
     font-family: main;
     font-weight: 200;
@@ -20,6 +31,12 @@
   transition: all 0.5s ease;
 }
 
+.over{
+  position: absolute;
+  width:100%;
+  height: 100%;
+}
+
 
 .front{
   .top{
@@ -30,22 +47,24 @@
     height: 100%;
     h1{
       margin-top: 100px;
+      font-family: titlefont;
+      font-size: 5rem;
+    }
+    h4{
+      font-family: subtitlefont;
+      font-size: 4rem;
     }
     h1,h2,h3,h4,h5,h6{
       text-align: center;
-
     }
     input{
       z-index: 105;
     }
   }
   .overlay{
-    position: absolute;
-    width:100%;
-    height: 100%;
+    @extend .over;
     background: rgba(70, 68, 62, 0.47);
     z-index: 100;
-
   }
 }
 
@@ -63,6 +82,55 @@
     img{
       width:100px;
     }
+  }
+}
+
+.props{
+   padding: 25px 0px;
+  .col{
+    text-align: center;
+    padding: 10px 0px;
+  }
+  h2{
+    font-size: 2rem;
+    margin: 10px 0px 5px 0px;
+  }
+  img{
+    width:120px;
+  }
+
+}
+
+.feedback{
+
+  position: relative;
+  margin-bottom: -20px;
+  color: #fff;
+  min-height: 600px;
+  .container{
+    padding: 35px 0px;
+  }
+  .input-field{
+   label{
+     color: #eee;
+   }
+  }
+
+  #resp{
+    display: none;
+  }
+
+
+  .bg{
+    @extend .over;
+    background: url('../images/laddu.jpg');
+    background-size: cover;
+    z-index: -2;
+  }
+  .overlay{
+    @extend .over;
+    background: rgba(70, 68, 62, 0.47);
+    z-index: -1;
   }
 }
 
