@@ -13,12 +13,14 @@
 <body>
 
   <div class="parallax-container">
+    <div class="top">
+      <img src="./public/images/logo.svg" style="width:150px;" />
+      <h1>FoodWeb</h1>
+      <h4>The easiest way to get Food!!</h4>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+    </div>
+
     <div class="parallax front">
-      <div class="top">
-        <img src="./public/images/logo.svg" style="width:150px;" />
-        <h1>FoodWeb</h1>
-        <h4>The easiest way to get Food!!</h4>
-      </div>
       <div class="overlay"></div>
       <img src="./public/images/pizza.jpg">
     </div>
@@ -58,11 +60,23 @@
     </div>
   </div>
 
-  <div class="parallax-container">
-    <div class="parallax front">
-      <div class="top">
-        <h3>Restaurants</h3>
+  <div class="parallax-container rest">
+    <div class="top">
+      <h3>Restaurants</h3>
+      <div class="row">
+        <div class="col m2 s6 offset-m2"><img class="circle responsive-img" src="./public/images/restaurants/pizzahut.jpg"></div>
+        <div class="col m2 s6"><img class="circle responsive-img" src="./public/images/restaurants/box.jpg"></div>
+        <div class="col m2 s6"><img class="circle responsive-img" src="./public/images/restaurants/br.jpg"></div>
+        <div class="col m2 s6"><img  class="circle responsive-img"src="./public/images/restaurants/roll.jpg"></div>
       </div>
+      <div class="row">
+        <div class="col m2 s6 offset-m2"><img class="circle responsive-img" src="./public/images/restaurants/subway.jpg"></div>
+        <div class="col m2 s6"><img class="circle responsive-img" src="./public/images/restaurants/yochina.jpg"></div>
+        <div class="col m2 s6"><img class="circle responsive-img" src="./public/images/restaurants/papajohns.jpg"></div>
+        <div class="col m2 s6"><img  class="circle responsive-img"src="./public/images/restaurants/dominos.jpg"></div>
+      </div>
+    </div>
+    <div class="parallax front">
       <div class="overlay"></div>
       <img src="./public/images/noodles.jpg">
     </div>
@@ -148,9 +162,31 @@
       </div>
     </footer>
 
+  <!--- Login Modal --->
+  <div id="modal1" class="modal loginmodal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <form class="col s12" action="#">
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Email" name="email"  type="email">
+              </div>
+              <div class="input-field col s12">
+                <input placeholder="Password" name="password" type="password">
+              </div>
+              <div class="input-field col s12">
+                <input type="submit" class="waves-effect btn" value="Login"/>
+              </div>
+            </div>
+      </form>
+
+    </div>
+  </div>
+
 
     <script>
       $(document).ready(function() {
+        $('.modal-trigger').leanModal();
         $('.parallax').parallax();
         $('#feedform').submit(function (){
           Materialize.toast('Sending feed..',1000);

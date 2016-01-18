@@ -8608,23 +8608,43 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
   height: 100%; }
 
-.front .top {
+/* some variables */
+.loginmodal {
+  background: #E35C59;
+  color: #fff; }
+  .loginmodal h4 {
+    color: #fff; }
+  .loginmodal .btn, .loginmodal .btn-large {
+    background-color: #eee;
+    color: #000; }
+  .loginmodal input[type="email"], .loginmodal input[type="password"] {
+    border-color: #c0c8c6; }
+    .loginmodal input[type="email"]:focus, .loginmodal input[type="email"]:active, .loginmodal input[type="password"]:focus, .loginmodal input[type="password"]:active {
+      border-color: #ebf7f9;
+      box-shadow: 0 1px 0 0 #ebf7f9; }
+
+.top {
   color: #fff;
   position: absolute;
   z-index: 103;
   width: 100%;
-  height: 100%; }
-  .front .top h1 {
-    margin-top: 100px;
+  height: 100%;
+  text-align: center; }
+  .top .btn, .top .btn-large {
+    background-color: #E35856;
+    color: #FFF; }
+  .top h1 {
+    margin-top: 0px;
     font-family: titlefont;
     font-size: 5rem; }
-  .front .top h4 {
+  .top h4 {
     font-family: subtitlefont;
     font-size: 4rem; }
-  .front .top h1, .front .top h2, .front .top h3, .front .top h4, .front .top h5, .front .top h6 {
+  .top h1, .top h2, .top h3, .top h4, .top h5, .top h6 {
     text-align: center; }
-  .front .top input {
+  .top input {
     z-index: 105; }
+
 .front .overlay {
   background: rgba(70, 68, 62, 0.47);
   z-index: 100; }
@@ -8640,6 +8660,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     width: 100%; }
     .services .food img {
       width: 100px; }
+
+.rest .top h3 {
+  padding-bottom: 20px; }
 
 .props {
   padding: 25px 0px; }
@@ -8687,6 +8710,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 @media only screen and (max-width: 600px) {
   .services .food img {
-    width: 70px; } }
+    width: 70px; }
+
+  .rest img {
+    width: 90px; } }
 
 /*# sourceMappingURL=styles.css.map */
