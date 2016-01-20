@@ -8665,6 +8665,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
       border-color: #ebf7f9;
       box-shadow: 0 1px 0 0 #ebf7f9; }
 
+.loginpage {
+  min-height: 500px; }
+  .loginpage p.error {
+    color: #ec4837;
+    font-size: 1.2rem; }
+
 .parallax_content, .top, .cus_sh {
   color: #fff;
   position: absolute;

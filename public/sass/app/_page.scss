@@ -91,6 +91,14 @@ $btnp_text : #FFF;
   }
 }
 
+.loginpage{
+  min-height: 500px;
+  p.error{
+    color: rgb(236, 72, 55);
+    font-size: 1.2rem;
+  }
+}
+
 .parallax_content{
   color:#fff;
   position: absolute;

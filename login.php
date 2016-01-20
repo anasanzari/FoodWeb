@@ -16,7 +16,7 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
     header('Location: ./customer/index.php');
   }
 }else{
-  header('Location: index.php');
+//  header('Location: index.php');
 }
 
  ?>
@@ -32,6 +32,37 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
   <script type="text/javascript" src="./public/js/materialize.min.js"></script>
 </head>
 <body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo logo">Foodweb</a>
+    </div>
+  </nav>
+
+<div class="loginpage">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <p class="error">Incorrect Email/Password. Please try again.</p>
+        <h4>Login</h4>
+        <form class="col s12" action="login.php" method="POST">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="Email" name="email"  type="email">
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Password" name="password" type="password">
+                </div>
+                <div class="input-field col s12">
+                  <input type="submit" class="waves-effect btn" value="Login"/>
+                </div>
+              </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
