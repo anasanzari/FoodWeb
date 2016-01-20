@@ -2343,6 +2343,24 @@ td, th {
       min-height: 84px;
       padding-left: 72px;
       position: relative; }
+      .collection .collection-item.avatar .menubtn {
+        height: 32px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #eee;
+        line-height: 32px;
+        padding: 0px 20px;
+        border-radius: 16px;
+        margin-top: -1px;
+        background-color: #E35856; }
+      .collection .collection-item.avatar .square {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        left: 15px;
+        display: inline-block;
+        vertical-align: middle; }
       .collection .collection-item.avatar .circle {
         position: absolute;
         width: 42px;
@@ -2360,7 +2378,8 @@ td, th {
       .collection .collection-item.avatar .title {
         font-size: 16px; }
       .collection .collection-item.avatar p {
-        margin: 0; }
+        margin: 0;
+        margin-bottom: 5px; }
       .collection .collection-item.avatar .secondary-content {
         position: absolute;
         top: 16px;
@@ -5224,7 +5243,7 @@ nav ul a span.badge {
     @media only screen and (min-width: 601px) {
       .row .col.m1 {
         width: 8.33333%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m1 {
         margin-left: 8.33333%; }
       .row .col.pull-m1 {
@@ -5233,7 +5252,7 @@ nav ul a span.badge {
         left: 8.33333%; }
       .row .col.m2 {
         width: 16.66667%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m2 {
         margin-left: 16.66667%; }
       .row .col.pull-m2 {
@@ -5242,7 +5261,7 @@ nav ul a span.badge {
         left: 16.66667%; }
       .row .col.m3 {
         width: 25%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m3 {
         margin-left: 25%; }
       .row .col.pull-m3 {
@@ -5251,7 +5270,7 @@ nav ul a span.badge {
         left: 25%; }
       .row .col.m4 {
         width: 33.33333%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m4 {
         margin-left: 33.33333%; }
       .row .col.pull-m4 {
@@ -5260,7 +5279,7 @@ nav ul a span.badge {
         left: 33.33333%; }
       .row .col.m5 {
         width: 41.66667%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m5 {
         margin-left: 41.66667%; }
       .row .col.pull-m5 {
@@ -5269,7 +5288,7 @@ nav ul a span.badge {
         left: 41.66667%; }
       .row .col.m6 {
         width: 50%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m6 {
         margin-left: 50%; }
       .row .col.pull-m6 {
@@ -5278,7 +5297,7 @@ nav ul a span.badge {
         left: 50%; }
       .row .col.m7 {
         width: 58.33333%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m7 {
         margin-left: 58.33333%; }
       .row .col.pull-m7 {
@@ -5287,7 +5306,7 @@ nav ul a span.badge {
         left: 58.33333%; }
       .row .col.m8 {
         width: 66.66667%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m8 {
         margin-left: 66.66667%; }
       .row .col.pull-m8 {
@@ -5296,7 +5315,7 @@ nav ul a span.badge {
         left: 66.66667%; }
       .row .col.m9 {
         width: 75%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m9 {
         margin-left: 75%; }
       .row .col.pull-m9 {
@@ -5305,7 +5324,7 @@ nav ul a span.badge {
         left: 75%; }
       .row .col.m10 {
         width: 83.33333%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m10 {
         margin-left: 83.33333%; }
       .row .col.pull-m10 {
@@ -5314,7 +5333,7 @@ nav ul a span.badge {
         left: 83.33333%; }
       .row .col.m11 {
         width: 91.66667%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m11 {
         margin-left: 91.66667%; }
       .row .col.pull-m11 {
@@ -5323,7 +5342,7 @@ nav ul a span.badge {
         left: 91.66667%; }
       .row .col.m12 {
         width: 100%;
-        margin-left: 0; }
+        /*  margin-left: 0; check if this hack cause any problem */ }
       .row .col.offset-m12 {
         margin-left: 100%; }
       .row .col.pull-m12 {
@@ -5442,7 +5461,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #00A5B7;
+  background-color: #E35856;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -8593,10 +8612,26 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   font-family: main;
   font-weight: 200; }
 
-.maingradient, .services {
+.logo {
+  font-family: titlefont; }
+
+.dropdown-button img {
+  width: 10px;
+  vertical-align: middle; }
+
+.dropdown-content {
+  margin-top: 56px;
+  min-width: 200px; }
+
+.maingradient, .cuisine, .services {
   background: #e53935;
   background: -webkit-linear-gradient(to left, #e53935, #e35d5b);
   background: linear-gradient(to left, #e53935, #e35d5b); }
+
+.greengradient {
+  background: #54e3b1;
+  background: -webkit-linear-gradient(to left, #54e3b1, #28dc9d);
+  background: linear-gradient(to left, #54e3b1, #28dc9d); }
 
 .trans, .socialbuttons a.social {
   -webkit-transition: all 0.5s ease;
@@ -8609,6 +8644,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%; }
 
 /* some variables */
+.pbtn {
+  background-color: #E35856;
+  color: #FFF; }
+
+.pbtn:hover {
+  background-color: #e24f4d; }
+
 .loginmodal {
   background: #E35C59;
   color: #fff; }
@@ -8623,12 +8665,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
       border-color: #ebf7f9;
       box-shadow: 0 1px 0 0 #ebf7f9; }
 
-.top {
+.parallax_content, .top, .cus_sh {
   color: #fff;
   position: absolute;
   z-index: 103;
   width: 100%;
-  height: 100%;
+  height: 100%; }
+
+.top {
   text-align: center; }
   .top .btn, .top .btn-large {
     background-color: #E35856;
@@ -8644,6 +8688,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     text-align: center; }
   .top input {
     z-index: 105; }
+
+.cus_sh h3 {
+  font-size: 2rem;
+  margin-top: 70px; }
+
+.cuisine {
+  color: #fff;
+  margin-bottom: -20px; }
 
 .front .overlay {
   background: rgba(70, 68, 62, 0.47);

@@ -1,3 +1,11 @@
+<?php
+require_once './classes/session.php';
+$session = new Session();
+if($session->getLoggedin()){
+  header("Location: ./customer/index.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +17,6 @@
   <script type="text/javascript" src="./public/js/jquery.min.js"></script>
   <script type="text/javascript" src="./public/js/materialize.min.js"></script>
 </head>
-
 <body>
 
   <div class="parallax-container">
@@ -30,21 +37,25 @@
       <div class="col s8 offset-s2">
         <ul class="collapsible popout" data-collapsible="accordion">
           <li>
-            <div class="collapsible-header"><i class="icon icon-email"></i>Food Delivery</div>
+            <div class="collapsible-header"><i class="icon icon-email"></i>Fast and Easy.</div>
             <div class="collapsible-body">
-              <p>Some text here.</p>
+              <p>Our primary objective is to make online food ordering fast and easy.
+                Our service provides the opportunity to find all of the restaurants
+                available in your area that can deliver to your house.</p>
             </div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="icon icon-contact"></i>Exclusive something</div>
+            <div class="collapsible-header"><i class="icon icon-contact"></i>Freedom of Choice</div>
             <div class="collapsible-body">
-              <p>Some other text here.</p>
+              <p>When you order through our website you can see a big selection of restaurants
+                which offer a broad variety of food.
+                You can compare prices and reviews in order to choose your favorite restaurant.</p>
             </div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="icon icon-info"></i>Something else here..</div>
+            <div class="collapsible-header"><i class="icon icon-info"></i>Food for the Soul</div>
             <div class="collapsible-body">
-              <p>Blah blah</p>
+              <p>Food is essential to life. And we bring you the best food in the town.</p>
             </div>
           </li>
         </ul>
@@ -139,34 +150,35 @@
 
   </div>
 
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5>FoodWeb, Inc.</h5></div>
-          <div class="socialbuttons">
-            <a class="social" href="#">
-              <img src="./public/images/social/facebook.png" />
-            </a>
-            <a class="social" href="#">
-              <img src="./public/images/social/Instagram.png" />
-            </a>
-            <a class="social" href="#">
-              <img src="./public/images/social/twitter.png" />
-            </a>
-          </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>FoodWeb, Inc.</h5></div>
+        <div class="socialbuttons">
+          <a class="social" href="#">
+            <img src="./public/images/social/facebook.png" />
+          </a>
+          <a class="social" href="#">
+            <img src="./public/images/social/Instagram.png" />
+          </a>
+          <a class="social" href="#">
+            <img src="./public/images/social/twitter.png" />
+          </a>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container"> © 2015 FoodWeb.</div>
-      </div>
-    </footer>
+    </div>
+    <div class="footer-copyright">
+      <div class="container"> © 2015 FoodWeb.</div>
+    </div>
+  </footer>
+
 
   <!--- Login Modal --->
   <div id="modal1" class="modal loginmodal">
     <div class="modal-content">
       <h4>Login</h4>
-      <form class="col s12" action="#">
+      <form class="col s12" action="login.php" method="POST">
             <div class="row">
               <div class="input-field col s12">
                 <input placeholder="Email" name="email"  type="email">
