@@ -1,5 +1,9 @@
 <?php
 require_once '../classes/session.php';
+require __DIR__.'/../vendor/autoload.php';
+require_once '../classes/Item.php';
+require '../config.php';
+require '../classes/boot.php';
 $session = new Session();
 $session->forceLogin('../index.php');
 
@@ -42,30 +46,34 @@ $session->forceLogin('../index.php');
         <div class="col m12">
           <h2>Cuisines</h3>
             <div class="row">
+              <?php
+               $cuisine = Item::distinct('cuisine')->lists('cuisine')->toArray();
+               $i=0;
+              foreach($cuisine as $cuisine)
+            {
+              if($i%4 == 0)
+                {
+              echo '
               <div class="col m3 s12">
-                <div class="collection">
-                 <a href="#!" class="collection-item">American</a>
-                 <a href="#!" class="collection-item">Andhra</a>
-                 <a href="#!" class="collection-item">Bengali</a>
-                 <a href="#!" class="collection-item">Biriani</a>
+                <div class="collection">';
+            }
+              echo '<a href="cuisine_result.php?cuisine='.$cuisine.'" class="collection-item">'.$cuisine.'</a>';
+
+              if($i%4 == 3)
+                {
+              echo '
                </div>
-              </div>
-               <div class="col m3 s12">
-                 <div class="collection">
-                  <a href="#!" class="collection-item">Burgers</a>
-                  <a href="#!" class="collection-item">Cakes-Bakery</a>
-                  <a href="#!" class="collection-item">Chinese</a>
-                  <a href="#!" class="collection-item">Continental</a>
-                </div>
-               </div>
-                <div class="col m3 s12">
-                  <div class="collection">
-                   <a href="#!" class="collection-item">European</a>
-                   <a href="#!" class="collection-item">Fast Food</a>
-                   <a href="#!" class="collection-item">Italian</a>
-                   <a href="#!" class="collection-item">Kebab</a>
-                 </div>
-                </div>
+              </div>';
+            }
+            $i++;
+            }
+            if($i%4 != 0)
+              {
+            echo '
+             </div>
+            </div>';
+          }
+            ?>
               </div>
             </div>
         </div>
