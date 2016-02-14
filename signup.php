@@ -61,7 +61,7 @@ else{
     </div>
   </nav>
 
-<div class="loginpage">
+<div class="admincontainer">
   <div class="container">
     <div class="row">
       <div class="col s12">
@@ -70,22 +70,28 @@ else{
         <form class="col s12" action="signup.php" method="POST">
               <div class="row">
                 <div class="input-field col s12">
-                  <input placeholder="Name" name="name"  type="text" required>
+                  <input name="name"  type="text" required>
+                  <label>Name</label>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Email" name="email"  type="email" required>
+                  <input name="email"  type="email" required>
+                  <label>Email</label>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Phone" name="phone"  type="text" required>
+                  <input  name="phone"  type="text" required>
+                  <label>Phone</label>
                 </div>
                 <div class="input-field col s12">
-                  <textArea placeholder="Address" name="address" required></textarea>
+                  <textArea name="address" class="materialize-textarea" required></textarea>
+                  <label>Address</label>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Password" name="password" type="password" required>
+                  <input name="password" type="password" required>
+                  <label>Password</label>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Confirm Password" name="con_password" type="password" required>
+                  <input name="con_password" type="password" required>
+                  <label>Confirm Password</label>
                 </div>
                 <div class="input-field col s12">
                   <input type="submit" class="waves-effect btn" value="Register" name="register"/>
@@ -93,7 +99,6 @@ else{
               </div>
         </form>
 
-      </div>
     </div>
   </div>
 </div>
