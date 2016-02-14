@@ -13,10 +13,11 @@ require_once '../classes/Restaurant.php';
  require '../classes/boot.php';
 ?>
 <?php
-  if(isset($_POST['restaurant']))
+  if(isset($_GET['cuisine']))
   {
-    $input = $_POST['restaurant'];
-    $res = Restaurant::where('place','LIKE','%'.$input.'%')->get();
+    $cuisine = $_GET['cuisine'];
+    $resid = Item::where('cuisine',$cuisine)->get()->lists('restaurant_id')->toArray();
+    $res = Restaurant::whereIN('id',$resid)->get();
   }
 ?>
   <body>
@@ -26,7 +27,7 @@ require_once '../classes/Restaurant.php';
         <div class="container">
           <div class="row">
             <div class="col s12">
-              <h4>Search Results</h3>
+              <?php echo'<h4>'.$cuisine.'</h3>';?>
               <ul class="collection">
               <?php
               foreach($res as $res)

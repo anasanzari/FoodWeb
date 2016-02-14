@@ -8,6 +8,10 @@ require_once './classes/User.php';
 
 $session = new Session();
 
+if($session->getLoggedin()){
+  header("Location: ./customer/index.php");
+}
+
 if(isset($_POST['email'])&&isset($_POST['password'])){
   $u = User::where('email',$_POST['email'])->where('password',$_POST['password'])->first();
   //var_dump($u);
