@@ -42,7 +42,7 @@ require_once '../classes/Restaurant.php';
                   echo $cuisine.'...';
                   }
                   echo '</p>
-                  <div class="chip">Min order : Rs. 200</div>
+                  <div class="chip">Min order : Rs. '.$res->min_order.'</div>
                   <a href="#" class="waves-effect btn menubtn">Menu</a>
                   </li>';
                 }
