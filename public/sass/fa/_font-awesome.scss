@@ -1,0 +1,50 @@
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "spinning";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+
+/* added styles to the core */
+@mixin icontype($fontsize,$wrapsize) {
+  font-size: $fontsize;//rems
+  width:$wrapsize;
+  height: $wrapsize;
+  &:before{
+    line-height: $wrapsize;
+    text-align: center;
+    display: block;
+  }
+}
+
+.fa-l{
+  @include icontype(2rem,4rem);
+}
+
+.fa-m{
+    @include icontype(1.3rem,2.5rem);
+}
+
+.fa-s{
+  @include icontype(1.5rem,3rem);
+}
+
+.fa-round{
+  border-radius: 100%;
+  background: lighten(#E35856,5%);
+  color:#fff;
+  &:hover{
+    background: darken(#E35856,5%);;
+  }
+}

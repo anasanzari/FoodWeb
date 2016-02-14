@@ -1,5 +1,6 @@
 <?php
 require_once '../classes/session.php';
+require_once '../classes/functions.php';
 require __DIR__.'/../vendor/autoload.php';
 require_once '../classes/Item.php';
 require '../config.php';
@@ -8,7 +9,7 @@ $session = new Session();
 $session->forceLogin('../index.php');
 
  ?>
-<?php include '../includes/header.php'; ?>
+<?php getTemplate(1,'header',[]); ?>
 <body>
 <?php include './includes/nav.php'; ?>
 
@@ -18,7 +19,7 @@ $session->forceLogin('../index.php');
         <div class="row">
           <div class="col s12 m6 offset-m3">
             <h3>Search Restaurants</h3>
-            <form action="results.php" method="POST">
+            <form action="results.php" method="GET">
                   <div class="row">
                     <div class="input-field col s12">
                       <input placeholder="Location" name="restaurant"  type="text">
@@ -82,7 +83,7 @@ $session->forceLogin('../index.php');
 
   </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php getTemplate(1,'footer',[]); ?>
 <script>
   $(document).ready(function() {
     $('.parallax').parallax();

@@ -6,23 +6,38 @@ require_once './classes/session.php';
 require './classes/boot.php';
 require_once './classes/User.php';
 
+$err = 0;
+
 $session = new Session();
 $session->redirectIfLogged('./customer/index.php','./admin/index.php');
 
-if(isset($_POST['email'])&&isset($_POST['password'])){
+if(isset($_POST['register'])){
 
-  if($_POST['email']==$admin_username&&$_POST['password']==$admin_password){
+  if($_POST['password']!=$_POST['con_password'])
+  {
+    $err = 1;
+  }
+  else{
+
+    $user = new User;
+    $user->name = $_POST['name'];
+    $user->phone = $_POST['phone'];
+    $user->email = $_POST['email'];
+    $user->address = $_POST['address'];
+    $user->password = $_POST['password'];
+    $user->save();
+
+
+
+  /*if($_POST['email']==$admin_username&&$_POST['password']==$admin_password){
     $session->logIn(0, Session::USER_ADMIN);
     header('Location: ./admin/index.php');
-  }
-
-  $u = User::where('email',$_POST['email'])->where('password',$_POST['password'])->first();
-  //var_dump($u);
-  if($u){
-    $session->logIn($u->id, Session::USER_REGULAR);
+  }*/
+    $session->logIn($user->id, Session::USER_REGULAR);
     header('Location: ./customer/index.php');
-  }
-}else{
+ }
+}
+else{
 //  header('Location: index.php');
 }
 
@@ -50,18 +65,30 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <p class="error">Incorrect Email/Password. Please try again.</p>
-        <h4>Login</h4>
-        <form class="col s12" action="login.php" method="POST">
+        <?php if($err==1){?><p style="color:red">Passwords Does Not Match</p><?php } ?>
+        <h4>Sign Up</h4>
+        <form class="col s12" action="signup.php" method="POST">
               <div class="row">
                 <div class="input-field col s12">
-                  <input placeholder="Email" name="email"  type="email">
+                  <input placeholder="Name" name="name"  type="text" required>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Password" name="password" type="password">
+                  <input placeholder="Email" name="email"  type="email" required>
                 </div>
                 <div class="input-field col s12">
-                  <input type="submit" class="waves-effect btn" value="Login"/>
+                  <input placeholder="Phone" name="phone"  type="text" required>
+                </div>
+                <div class="input-field col s12">
+                  <textArea placeholder="Address" name="address" required></textarea>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Password" name="password" type="password" required>
+                </div>
+                <div class="input-field col s12">
+                  <input placeholder="Confirm Password" name="con_password" type="password" required>
+                </div>
+                <div class="input-field col s12">
+                  <input type="submit" class="waves-effect btn" value="Register" name="register"/>
                 </div>
               </div>
         </form>
