@@ -21,7 +21,7 @@ if($session->getLoggedin()){
 
   <div class="parallax-container">
     <div class="top">
-      <img src="./public/images/logo.svg" style="width:150px;" />
+      <img src="./public/images/logo.png" style="width:150px;" />
       <h1>FoodWeb</h1>
       <h4>The easiest way to get Food!!</h4>
       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
