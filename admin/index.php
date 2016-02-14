@@ -1,47 +1,66 @@
 <?php
 require_once '../classes/session.php';
+require '../classes/functions.php';
 require __DIR__.'/../vendor/autoload.php';
 require_once '../classes/Restaurant.php';
 require '../config.php';
 require '../classes/boot.php';
 
+$session = new Session();
+$session->adminForceLogin("../index.php");
+
 $restaurants = Restaurant::orderBy("id","desc")->get();
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+
+  <?php getTemplate(1,'header',[]); ?>
+
   <body>
+    <?php getTemplate(1,'admin_nav',[]); ?>
+  <div class="admincontainer">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 offset-m3">
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Place</th>
-        <th>Links</th>
-      </tr>
-      <?php
-      foreach($restaurants as $restaurant)
-      {
-      ?>
-    <tr>
-      <td><?= $restaurant->name ?></td>
-      <td><?= $restaurant->place ?></td>
-      <td>
-        <a href="view_items.php?id=<?= $restaurant->id ?>"><button>View Items</button></a>
-        <a href="edit_restaurant.php?id=<?= $restaurant->id ?>"><button>Edit</button></a>
-        <a href="delete_restaurant.php?id=<?= $restaurant->id ?>"><button>Delete</button></a>
-      </td>
-    </tr>
-    <?php
-  }?>
-    </table>
+
+        <div class="col s12 m8 offset-m2">
+          <h2>Restaurants</h2>
+          <ul class="collection">
+            <?php
+          foreach($restaurants as $restaurant)
+          {
+            ?>
+            <li class="collection-item restaurant">
+              <div class="menu">
+                <a href="view_items.php?id=<?= $restaurant->id ?>"  title="view">
+                  <i class="fa fa-m fa-round fa-list"></i>
+                </a>
+                <a href="edit_restaurant.php?id=<?= $restaurant->id ?>" title="edit">
+                  <i class="fa fa-m fa-round fa-edit"></i>
+                </a>
+                <a href="delete_restaurant.php?id=<?= $restaurant->id ?>" title="delete">
+                  <i class="fa fa-m fa-round fa-close"></i>
+                </a>
+              </div>
+              <h4 class="line1"><?= $restaurant->name ?></h4>
+              <!--h4 class="line2"><?= $restaurant->place ?></h4-->
+              <div class="chip"><?= $restaurant->place ?></div>
+              <div class="chip">Min Order: &#8377 <?= $restaurant->min_order ?> </div>
+            </li>
+        <?php }
+        ?>
+
+          </ul>
+
+          <a href="create_restaurant.php" title="Add Restaurant">
+            <i class="fa fa-m fa-round fa-plus"></i>
+          </a>
+
+        </div>
+      </div>
+
     </div>
   </div>
-  <a href="create_restaurant.php"><button>Add Restaurant</button></a>
-</div>
+
+    <?php getTemplate(1,'footer',[]); ?>
+
   </body>
-</html>
+
+  </html>

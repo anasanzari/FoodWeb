@@ -15,6 +15,7 @@ class Session {
     }
 
     private function checkLogin(){
+      
         if(isset($_SESSION['username'])&&isset($_SESSION['usertype'])){
             $this->username = $_SESSION['username'];
             $this->usertype = $_SESSION['usertype'];
@@ -26,14 +27,30 @@ class Session {
         }
     }
 
+    function adminForceLogin($loc){
+      if(!$this->getLoggedin()||$this->usertype!=session::USER_ADMIN){
+        header("Location: ".$loc);
+      }
+    }
+
     function forceLogin($loc){
       if(!$this->getLoggedin()){
         header("Location: ".$loc);
       }
     }
 
+    function redirectIfLogged($user,$admin){
+      if($this->getLoggedin()){
+        if($this->usertype==session::USER_ADMIN){
+            header("Location: ".$admin);
+        }else{
+          header("Location: ".$user);
+
+        }
+      }
+    }
+
     function logIn($user,$user_type){
-        if(!$user) return;
         $this->username = $_SESSION['username'] = $user;
         $this->usertype = $_SESSION['usertype'] = $user_type;
         $this->loggedin = true;

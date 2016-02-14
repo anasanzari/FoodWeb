@@ -1,9 +1,7 @@
 <?php
 require_once './classes/session.php';
 $session = new Session();
-if($session->getLoggedin()){
-  header("Location: ./customer/index.php");
-}
+$session->redirectIfLogged('./customer/index.php','./admin/index.php');
 
 ?>
 <!DOCTYPE html>
@@ -62,12 +60,14 @@ if($session->getLoggedin()){
       </div>
     </div>
     <div class="container food">
-      <div class="col s6 offset-3">
+      <div class="row">
+      <div class="col m6 offset-m3">
         <img src="./public/images/svg/chicken4.svg" />
         <img src="./public/images/svg/dining.svg" />
         <img src="./public/images/svg/french3.svg" />
         <img src="./public/images/svg/hamburger2.svg" />
       </div>
+     </div>
     </div>
   </div>
 
@@ -188,6 +188,7 @@ if($session->getLoggedin()){
               </div>
               <div class="input-field col s12">
                 <input type="submit" class="waves-effect btn" value="Login"/>
+                <a class="waves-effect btn" href="./signup.php">SignUp</a>
               </div>
             </div>
       </form>

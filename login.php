@@ -7,12 +7,15 @@ require './classes/boot.php';
 require_once './classes/User.php';
 
 $session = new Session();
-
-if($session->getLoggedin()){
-  header("Location: ./customer/index.php");
-}
+$session->redirectIfLogged('./customer/index.php','./admin/index.php');
 
 if(isset($_POST['email'])&&isset($_POST['password'])){
+
+  if($_POST['email']==$admin_username&&$_POST['password']==$admin_password){
+    $session->logIn(0, Session::USER_ADMIN);
+    header('Location: ./admin/index.php');
+  }
+
   $u = User::where('email',$_POST['email'])->where('password',$_POST['password'])->first();
   //var_dump($u);
   if($u){
