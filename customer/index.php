@@ -5,6 +5,10 @@ require __DIR__.'/../vendor/autoload.php';
 require_once '../classes/Item.php';
 require '../config.php';
 require '../classes/boot.php';
+require_once '../classes/Restaurant.php';
+require_once '../classes/User.php';
+require_once '../classes/Order.php';
+
 $session = new Session();
 $session->forceLogin('../index.php');
 

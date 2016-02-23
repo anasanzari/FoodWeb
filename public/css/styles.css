@@ -10272,11 +10272,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     display: block; }
 
 .fa-s {
-  font-size: 1.5rem;
-  width: 3rem;
-  height: 3rem; }
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem; }
   .fa-s:before {
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: center;
     display: block; }
 
@@ -10467,6 +10467,33 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .admincontainer .restaurant .menu {
     float: right; }
 
+.redtext {
+  color: #f06a38; }
+
+.orderscontainer {
+  min-height: 520px;
+  background: #F5F2F0; }
+  .orderscontainer .menubtn {
+    float: right; }
+  .orderscontainer .inline {
+    font-size: 1rem;
+    margin: 0 0 0 0;
+    display: inline-block; }
+  .orderscontainer .itemtotal {
+    background-color: #b4d5e8; }
+  .orderscontainer .right {
+    float: right;
+    margin-top: -5px; }
+  .orderscontainer .btns {
+    width: 50px; }
+    .orderscontainer .btns a {
+      display: block; }
+  .orderscontainer .tot {
+    display: block;
+    text-align: right; }
+    .orderscontainer .tot .grandtotal {
+      background-color: #f09d8b; }
+
 .customercontainer {
   min-height: 520px;
   background: #F5F2F0; }
@@ -10480,6 +10507,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-top: 10px; }
   .customercontainer .restaurant .menu {
     float: right; }
+  .customercontainer .restaurant .order {
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px; }
+  .customercontainer .orderbox {
+    padding-top: 60px; }
+  .customercontainer .placeorder .inline {
+    font-size: 1rem;
+    margin: 0 0 0 0;
+    display: inline-block; }
+  .customercontainer .placeorder .itemtotal {
+    background-color: #b4d5e8; }
+  .customercontainer .placeorder .right {
+    float: right;
+    margin-top: -5px; }
+  .customercontainer .placeorder .btns {
+    width: 50px; }
+    .customercontainer .placeorder .btns a {
+      display: block; }
+  .customercontainer .placeorder .tot {
+    display: block;
+    text-align: right; }
+    .customercontainer .placeorder .tot .grandtotal {
+      background-color: #f09d8b; }
 
 .menubtn {
   height: 32px;

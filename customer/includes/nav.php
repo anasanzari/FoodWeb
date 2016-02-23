@@ -6,8 +6,8 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo logo">Foodweb</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">Orders</a></li>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+      <li><a href="./orders.php">Orders</a></li>
+      <li><a class="dropdown-button" href="./account.php" data-activates="dropdown1">
         Account
         <img src="../public/images/icons/arrow.png" style=""/></a></li>
 

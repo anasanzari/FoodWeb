@@ -272,6 +272,46 @@ $btnp_text : #FFF;
   }
 }
 
+.redtext{
+  color:rgb(240, 106, 56);
+}
+
+.orderscontainer{
+  min-height: 520px;
+  background: #F5F2F0;
+
+  .menubtn{
+    float: right;
+  }
+
+  .inline{
+    font-size: 1rem;
+    margin: 0 0 0 0;
+    display: inline-block;
+  }
+  .itemtotal{
+    background-color: rgb(180, 213, 232);
+  }
+  .right{
+      float: right;
+      margin-top: -5px;
+  }
+  .btns{
+    width: 50px;
+    a{
+      display: block;
+    }
+  }
+  .tot{
+    display: block;
+    text-align: right;
+    .grandtotal{
+      background-color: rgb(240, 157, 139);
+    }
+  }
+
+}
+
 .customercontainer{
   min-height: 520px;
   background: #F5F2F0;
@@ -290,7 +330,44 @@ $btnp_text : #FFF;
     .menu{
       float: right;
     }
+    .order{
+      float: right;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
 
+  }
+
+  .orderbox{
+    padding-top: 60px;
+  }
+
+  .placeorder{
+    .inline{
+      font-size: 1rem;
+      margin: 0 0 0 0;
+      display: inline-block;
+    }
+    .itemtotal{
+      background-color: rgb(180, 213, 232);
+    }
+    .right{
+        float: right;
+        margin-top: -5px;
+    }
+    .btns{
+      width: 50px;
+      a{
+        display: block;
+      }
+    }
+    .tot{
+      display: block;
+      text-align: right;
+      .grandtotal{
+        background-color: rgb(240, 157, 139);
+      }
+    }
   }
 }
 .menubtn{
