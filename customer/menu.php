@@ -39,7 +39,7 @@ $restaurant = Restaurant::find($rest_id);
               <h4 class="line1">{{item.name}}</h4>
               <div class="chip">{{item.cuisine}}</div>
               <div class="chip"> &#8377 {{item.price}} </div>
-              {{item.order}}
+
             </li>
           </ul>
 
@@ -57,6 +57,7 @@ $restaurant = Restaurant::find($rest_id);
           </li>
 
           <li class="collection-item">
+            <div class="left">Min Order: <?=$restaurant->min_order ?></div>
             <div class="tot">
               Total : <div class="chip grandtotal"> &#8377 {{total}}</div>
             </div>
@@ -68,7 +69,7 @@ $restaurant = Restaurant::find($rest_id);
           <label>Address</label>
         </div>
         <div class="input-field col s12">
-          <a class="waves-effect waves-light btn" href="#" ng-click="order()">Order</a>
+          <button class="waves-effect waves-light btn" href="#" ng-click="order()" ng-disabled="total<minorder||address==''">Order</button>
         </div>
 
       </div>
@@ -105,7 +106,8 @@ $restaurant = Restaurant::find($rest_id);
       app.controller('PageController',function(Api,$scope){
         $scope.name = "Hello";
         $scope.rest_id = <?=$_GET['id']?>;
-        $scope.address = "Please enter address here.";
+        $scope.address = "";
+        $scope.minorder = <?=$restaurant->min_order?>;
 
         Api.getArray({query: 'menu',id:$scope.rest_id}, function (response) {
             $scope.menu = response;

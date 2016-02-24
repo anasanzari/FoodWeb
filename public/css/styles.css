@@ -10470,10 +10470,24 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .redtext {
   color: #f06a38; }
 
+.bluetext {
+  color: #4aa5e7; }
+
+.alert {
+  background: #f0a174;
+  padding: 3px;
+  padding-left: 20px;
+  font-size: 1.3rem;
+  border-radius: 2px; }
+
+.accountcontainer {
+  min-height: 520px;
+  background: #F5F2F0; }
+
 .orderscontainer {
   min-height: 520px;
   background: #F5F2F0; }
-  .orderscontainer .menubtn {
+  .orderscontainer .collection .menubtn {
     float: right; }
   .orderscontainer .inline {
     font-size: 1rem;
@@ -10522,6 +10536,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .customercontainer .placeorder .right {
     float: right;
     margin-top: -5px; }
+  .customercontainer .placeorder .left {
+    float: left; }
   .customercontainer .placeorder .btns {
     width: 50px; }
     .customercontainer .placeorder .btns a {

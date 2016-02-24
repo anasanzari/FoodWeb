@@ -275,13 +275,32 @@ $btnp_text : #FFF;
 .redtext{
   color:rgb(240, 106, 56);
 }
+.bluetext{
+  color:rgb(74, 165, 231);
+}
+
+.alert{
+  background: rgb(240, 161, 116);
+  padding: 3px;
+  padding-left: 20px;
+  font-size: 1.3rem;
+  border-radius: 2px;
+}
+
+.accountcontainer{
+
+  min-height: 520px;
+  background: #F5F2F0;
+}
 
 .orderscontainer{
   min-height: 520px;
   background: #F5F2F0;
 
-  .menubtn{
-    float: right;
+  .collection{
+    .menubtn{
+      float: right;
+    }
   }
 
   .inline{
@@ -354,6 +373,9 @@ $btnp_text : #FFF;
     .right{
         float: right;
         margin-top: -5px;
+    }
+    .left{
+      float: left;
     }
     .btns{
       width: 50px;
