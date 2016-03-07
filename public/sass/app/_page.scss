@@ -256,8 +256,9 @@ $btnp_text : #FFF;
   background: #F5F2F0;
   .restaurant{
     .img-wrap{
-      display: inline-block;
-      width: 100px;
+      float:left;
+      width:70px;
+      margin-right: 7px;
     }
     .line1{
       font-size: 1.5rem;
@@ -338,6 +339,14 @@ $btnp_text : #FFF;
 .customercontainer{
   min-height: 520px;
   background: #F5F2F0;
+
+  .img-wrap{
+    float:left;
+    width:100px;
+    margin-right: 7px;
+    margin-bottom: 20px;
+  }
+
   .restaurant{
     .line1{
       font-size: 1.5rem;

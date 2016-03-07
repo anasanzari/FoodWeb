@@ -10457,8 +10457,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   min-height: 520px;
   background: #F5F2F0; }
   .admincontainer .restaurant .img-wrap {
-    display: inline-block;
-    width: 100px; }
+    float: left;
+    width: 70px;
+    margin-right: 7px; }
   .admincontainer .restaurant .line1 {
     font-size: 1.5rem;
     margin: 0 0 0 0; }
@@ -10514,6 +10515,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .customercontainer {
   min-height: 520px;
   background: #F5F2F0; }
+  .customercontainer .img-wrap {
+    float: left;
+    width: 100px;
+    margin-right: 7px;
+    margin-bottom: 20px; }
   .customercontainer .restaurant .line1 {
     font-size: 1.5rem;
     margin: 0 0 0 0; }

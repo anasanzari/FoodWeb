@@ -40,7 +40,7 @@ $restaurants = Restaurant::orderBy("id","desc")->get();
                 </a>
               </div>
               <div class="img-wrap">
-                <img src="../<?=$restaurant->img?>" class="img-responsive" />
+                <img src="../<?=$restaurant->img?>" class="responsive-img circle" />
               </div>
               <h4 class="line1"><?= $restaurant->name ?></h4>
               <!--h4 class="line2"><?= $restaurant->place ?></h4-->
