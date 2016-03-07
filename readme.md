@@ -17,9 +17,14 @@
 ## 2. Schema
 
 ### Restaurant
-    Fields: name, place, min_order, img
+    Fields: id,name, place, min_order, img
+### Items
+    Fields: item_id,restaurant_id,cuisine,name,price,img
+### Users
+    Fields: id,name,phone,address,email,password
+### Orders
+    Fields: id,userid,rest_id,address,items,status       
 
-### add the rest here.
 
 ## 3. Other Technical Details
 
