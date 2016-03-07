@@ -54,7 +54,7 @@ class Uploader {
 
           }*/
 
-          $target = $fileName.$extn;
+          $target = $fileName;
           $upload_dir = $path;
           if(move_uploaded_file($temp, $upload_dir."/".$target)){
               return 0;

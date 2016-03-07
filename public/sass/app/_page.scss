@@ -255,6 +255,10 @@ $btnp_text : #FFF;
   min-height: 520px;
   background: #F5F2F0;
   .restaurant{
+    .img-wrap{
+      display: inline-block;
+      width: 100px;
+    }
     .line1{
       font-size: 1.5rem;
       margin: 0 0 0 0;

@@ -39,6 +39,9 @@ $restaurants = Restaurant::orderBy("id","desc")->get();
                   <i class="fa fa-m fa-round fa-close"></i>
                 </a>
               </div>
+              <div class="img-wrap">
+                <img src="../<?=$restaurant->img?>" class="img-responsive" />
+              </div>
               <h4 class="line1"><?= $restaurant->name ?></h4>
               <!--h4 class="line2"><?= $restaurant->place ?></h4-->
               <div class="chip"><?= $restaurant->place ?></div>
