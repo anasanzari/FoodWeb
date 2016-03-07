@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2016 at 07:49 PM
+-- Generation Time: Mar 07, 2016 at 10:45 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -63,29 +63,30 @@ CREATE TABLE IF NOT EXISTS `items` (
   `restaurant_id` int(11) NOT NULL,
   `cuisine` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `price` double NOT NULL
+  `price` double NOT NULL,
+  `img` varchar(256) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`item_id`, `restaurant_id`, `cuisine`, `name`, `price`) VALUES
-(2, 3, 'Coffee', 'Cappuchino', 40),
-(3, 3, 'Coffee', 'Expresso', 50),
-(6, 5, 'Burger', 'Beef Burger', 50),
-(7, 5, 'Burger', 'Chicken Burger', 200),
-(8, 5, 'Burger', 'Spicy Cheese Burger', 250),
-(9, 5, 'Juice', 'Lime Juice', 35),
-(10, 3, 'Coffee', 'Americano', 30),
-(11, 3, 'Cake', 'Blackberry Cheese Cake', 250),
-(12, 3, 'Cake', 'Lemon Cake', 200),
-(13, 2, 'Rice', 'Spicy Chicken Fried Rice', 350),
-(14, 2, 'Chicken', 'BBQ Chicken', 200),
-(15, 2, 'Noodles', 'Schezwan Egg Noodles', 200),
-(16, 2, 'Chicken', 'Chicken Manchurian', 175),
-(17, 2, 'Juice', 'Orange Juice', 35),
-(18, 2, 'Juice', 'Mango Juice', 50);
+INSERT INTO `items` (`item_id`, `restaurant_id`, `cuisine`, `name`, `price`, `img`) VALUES
+(2, 3, 'Coffee', 'Cappuchino', 40, ''),
+(3, 3, 'Coffee', 'Expresso', 50, ''),
+(6, 5, 'Burger', 'Beef Burger', 50, ''),
+(7, 5, 'Burger', 'Chicken Burger', 200, ''),
+(8, 5, 'Burger', 'Spicy Cheese Burger', 250, ''),
+(9, 5, 'Juice', 'Lime Juice', 35, ''),
+(10, 3, 'Coffee', 'Americano', 30, ''),
+(11, 3, 'Cake', 'Blackberry Cheese Cake', 250, ''),
+(12, 3, 'Cake', 'Lemon Cake', 200, ''),
+(13, 2, 'Rice', 'Spicy Chicken Fried Rice', 350, ''),
+(14, 2, 'Chicken', 'BBQ Chicken', 200, ''),
+(15, 2, 'Noodles', 'Schezwan Egg Noodles', 200, ''),
+(16, 2, 'Chicken', 'Chicken Manchurian', 175, ''),
+(17, 2, 'Juice', 'Orange Juice', 35, ''),
+(18, 2, 'Juice', 'Mango Juice', 50, '');
 
 -- --------------------------------------------------------
 
@@ -120,17 +121,18 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
 `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `place` varchar(100) NOT NULL,
-  `min_order` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `min_order` int(11) NOT NULL,
+  `img` varchar(250) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`id`, `name`, `place`, `min_order`) VALUES
-(2, 'Le Sante Cafe', 'Bangalore', 150),
-(3, 'Coffee House', 'Mumbai', 200),
-(5, 'Burger Launch', 'Calicut', 150);
+INSERT INTO `restaurant` (`id`, `name`, `place`, `min_order`, `img`) VALUES
+(2, 'Le Sante Cafe', 'Bangalore', 150, ''),
+(3, 'Coffee House', 'Mumbai', 200, ''),
+(5, 'Burger Launch', 'Calicut', 150, '');
 
 -- --------------------------------------------------------
 
@@ -212,7 +214,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --
