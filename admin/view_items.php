@@ -41,6 +41,9 @@ $restaurant = Restaurant::find($rest_id);
                   <i class="fa fa-m fa-round fa-close"></i>
                 </a>
               </div>
+              <div class="img-wrap">
+                <img src="../<?=$item->img?>" class="responsive-img circle" />
+              </div>
               <h4 class="line1"><?= $item->name ?></h4>
               <div class="chip"><?= $item->cuisine ?></div>
               <div class="chip"> &#8377 <?= $item->price ?> </div>

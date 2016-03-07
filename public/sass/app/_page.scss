@@ -346,6 +346,12 @@ $btnp_text : #FFF;
     margin-right: 7px;
     margin-bottom: 20px;
   }
+  .img-wrap2{
+    float:left;
+    width:75px;
+    margin-right: 7px;
+    margin-bottom: 5px;
+  }
 
   .restaurant{
     .line1{
@@ -418,6 +424,13 @@ $btnp_text : #FFF;
   &:hover{
     background-color: darken(#E35856,5%);
   }
+}
+
+.center{
+  text-align: center;
+}
+.img-rest{
+  max-width: 150px;
 }
 
 @media #{$small-and-down} {

@@ -27,6 +27,7 @@ if(isset($_POST['create']))
     header("location:view_items.php?id=$rest_id");
   }
 }
+$item = Item::find($item_id);
 ?>
 
 
@@ -39,8 +40,11 @@ if(isset($_POST['create']))
       <div class="row">
 
         <div class="col s12 m8 offset-m2">
-          <h3>Edit Item Photo</h3>
-          <form class="col s12" action="edit_item_photo.php?item_id=<?= $item_id ?>&&rest_id=<?= $rest_id ?>"" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+          <h3 class="center">Edit Item Image</h3>
+          <div class="center">
+            <img src="../<?=$item->img?>" class="responsive-img circle img-rest" />
+          </div>
+          <form class="col s12" action="edit_item_photo.php?item_id=<?= $item_id ?>&rest_id=<?= $rest_id ?>" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
             <div class="file-field col s12 input-field">
               <div class="btn">
                 <span>File</span>

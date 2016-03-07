@@ -37,13 +37,15 @@ if(isset($_POST['create']))
   <div class="admincontainer">
     <div class="container">
       <div class="row">
-
         <div class="col s12 m8 offset-m2">
-          <h3>Edit Item Photo</h3>
-          <form class="col s12" action="edit_rest_photo.php?id=<?= $rest_id ?>"" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+          <h3 class="center">Edit Photo</h3>
+          <div class="center">
+            <img src="../<?=$restaurant->img?>" class="responsive-img circle img-rest" />
+          </div>
+          <form class="col s12" action="edit_rest_photo.php?id=<?= $rest_id ?>" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
             <div class="file-field col s12 input-field">
               <div class="btn">
-                <span>File</span>
+                <span>Upload Photo</span>
                 <input type="file" name="img" required>
               </div>
               <div class="file-path-wrapper">
@@ -60,6 +62,7 @@ if(isset($_POST['create']))
 
     </div>
   </div>
+</div>
 
     <?php getTemplate(1,'footer',[]); ?>
 

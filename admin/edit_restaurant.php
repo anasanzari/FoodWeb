@@ -31,7 +31,7 @@ if(isset($_POST['create']))
 
         <div class="col s12 m8 offset-m2">
           <h3>Add Restaurant</h3>
-          
+
           <form class="col s12" action="edit_restaurant.php?id=<?= $restaurant->id ?>" method="post">
             <div class="input-field col s12">
               <input type="text" name="name"  value="<?= $restaurant->name ?>">
@@ -47,6 +47,7 @@ if(isset($_POST['create']))
             </div>
             <div class="input-field col s12">
               <input type="submit" name="create" value="Save" class="waves-effect btn"/>
+              <a href="./edit_rest_photo.php?id=<?=$rest_id?>" class="waves-effect btn">Edit Photo</a>
             </div>
           </form>
 

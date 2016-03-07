@@ -36,9 +36,13 @@ $restaurant = Restaurant::find($rest_id);
               <a class="order" href="#" ng-click="add($index)" title="add"><i class="fa fa-s fa-round fa-plus"></i></a>
               <a class="order" ng-show="item.order>0" href="#" ng-click="minus($index)" title="add"><i class="fa fa-s fa-round fa-minus"></i></a>
 
+              <div class="img-wrap2">
+                <img ng-src="{{'../'+item.img}}" class="responsive-img circle" />
+              </div>
               <h4 class="line1">{{item.name}}</h4>
               <div class="chip">{{item.cuisine}}</div>
               <div class="chip"> &#8377 {{item.price}} </div>
+              <div style="clear:both"></div>
 
             </li>
           </ul>

@@ -10520,6 +10520,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     width: 100px;
     margin-right: 7px;
     margin-bottom: 20px; }
+  .customercontainer .img-wrap2 {
+    float: left;
+    width: 75px;
+    margin-right: 7px;
+    margin-bottom: 5px; }
   .customercontainer .restaurant .line1 {
     font-size: 1.5rem;
     margin: 0 0 0 0; }
@@ -10569,6 +10574,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-color: #E35856; }
   .menubtn:hover {
     background-color: #df4240; }
+
+.center {
+  text-align: center; }
+
+.img-rest {
+  max-width: 150px; }
 
 @media only screen and (max-width: 600px) {
   .services .food img {

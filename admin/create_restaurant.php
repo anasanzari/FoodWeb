@@ -54,7 +54,7 @@ if(isset($_POST['create']))
 
             <div class="file-field col s12 input-field">
               <div class="btn">
-                <span>File</span>
+                <span>Upload Photo</span>
                 <input type="file" name="img" required>
               </div>
               <div class="file-path-wrapper">

@@ -34,7 +34,8 @@ $session->forceLogin('../index.php');
               foreach($res as $res)
                 {
                   echo '<li class="collection-item">
-                  <!--img src="../public/images/restaurants/dominos.jpg" class="square"-->
+                  <div class="img-wrap">
+                  <img src="../'.$res->img.'" class="responsive-img circle"></div>
                   <h4 class="line1">'. $res->name.'</h4>';
                   $cuisines = Item::where('restaurant_id',$res->id)->distinct('cuisine')->lists('cuisine')->toArray();
                   echo '<p>';

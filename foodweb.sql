@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2016 at 10:45 AM
+-- Generation Time: Mar 07, 2016 at 04:23 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `name` varchar(100) NOT NULL,
   `price` double NOT NULL,
   `img` varchar(256) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `items`
@@ -74,10 +74,8 @@ CREATE TABLE IF NOT EXISTS `items` (
 INSERT INTO `items` (`item_id`, `restaurant_id`, `cuisine`, `name`, `price`, `img`) VALUES
 (2, 3, 'Coffee', 'Cappuchino', 40, ''),
 (3, 3, 'Coffee', 'Expresso', 50, ''),
-(6, 5, 'Burger', 'Beef Burger', 50, ''),
-(7, 5, 'Burger', 'Chicken Burger', 200, ''),
-(8, 5, 'Burger', 'Spicy Cheese Burger', 250, ''),
-(9, 5, 'Juice', 'Lime Juice', 35, ''),
+(6, 5, 'Burger', 'Beef Burger', 50, 'public/images/uploads/items/burger.jpg'),
+(7, 5, 'Burger', 'Chicken Burger', 200, 'public/images/uploads/items/ch_burger.jpg'),
 (10, 3, 'Coffee', 'Americano', 30, ''),
 (11, 3, 'Cake', 'Blackberry Cheese Cake', 250, ''),
 (12, 3, 'Cake', 'Lemon Cake', 200, ''),
@@ -86,7 +84,8 @@ INSERT INTO `items` (`item_id`, `restaurant_id`, `cuisine`, `name`, `price`, `im
 (15, 2, 'Noodles', 'Schezwan Egg Noodles', 200, ''),
 (16, 2, 'Chicken', 'Chicken Manchurian', 175, ''),
 (17, 2, 'Juice', 'Orange Juice', 35, ''),
-(18, 2, 'Juice', 'Mango Juice', 50, '');
+(18, 2, 'Juice', 'Mango Juice', 50, ''),
+(20, 5, 'Pizza', 'Chef''s Spicy Pizza', 150, 'public/images/uploads/items/pizza.jpg');
 
 -- --------------------------------------------------------
 
@@ -123,16 +122,17 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
   `place` varchar(100) NOT NULL,
   `min_order` int(11) NOT NULL,
   `img` varchar(250) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `restaurant`
 --
 
 INSERT INTO `restaurant` (`id`, `name`, `place`, `min_order`, `img`) VALUES
-(2, 'Le Sante Cafe', 'Bangalore', 150, ''),
-(3, 'Coffee House', 'Mumbai', 200, ''),
-(5, 'Burger Launch', 'Calicut', 150, '');
+(2, 'Baskin Robins', 'Bangalore', 150, 'public/images/uploads/restaurants/br.jpg'),
+(3, 'Papa John''s', 'Mumbai', 200, 'public/images/uploads/restaurants/papajohns.jpg'),
+(5, 'Dominos', 'Calicut', 150, 'public/images/uploads/restaurants/dominos.jpg'),
+(11, 'Pizza Hut', 'Calicut', 400, 'public/images/uploads/restaurants/pizzahut.jpg');
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `orders`
 --
@@ -214,7 +214,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `users`
 --
