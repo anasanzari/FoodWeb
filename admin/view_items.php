@@ -58,6 +58,7 @@ $restaurant = Restaurant::find($rest_id);
 
     </div>
   </div>
+</div>
 
     <?php getTemplate(1,'footer',[]); ?>
 

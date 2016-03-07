@@ -10,6 +10,7 @@ class Item extends Model {
 	public $timestamps = false;
 	protected $table = 'items';
   protected $primaryKey = 'item_id';
+  //protected $fillable = ['item_id','restaurant_id','cuisine','name'];
 
   public function restaurant()
   {
