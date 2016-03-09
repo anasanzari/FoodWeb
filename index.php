@@ -71,6 +71,32 @@ $session->redirectIfLogged('./customer/index.php','./admin/index.php');
     </div>
   </div>
 
+  <div class="vid">
+    <a class="play" id="icon"><img src="./public/images/icons/play.png"/></a>
+    <video id="bgvid" loop="">
+        <source src="./public/video/sample.mp4" type="video/mp4">
+    </video>
+    <script>
+    var vid = $("#bgvid");
+    var icon = $("#icon");
+    var isPlaying = false;
+    vid.click(function(){
+      if(isPlaying){
+        isPlaying = !isPlaying;
+        vid[0].pause();
+        icon.show();
+      }
+    });
+    icon.click(function(){
+      if(!isPlaying){
+        isPlaying = !isPlaying;
+        vid[0].play();
+        icon.hide();
+      }
+    })
+    </script>
+  </div>
+
   <div class="parallax-container rest">
     <div class="top">
       <h3>Restaurants</h3>
