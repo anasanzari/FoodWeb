@@ -10611,6 +10611,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     background-color: #bc1d19;
     cursor: pointer; }
 
+.summary .collection .collection-item span {
+  width: 30%;
+  display: inline-block; }
+
 @media only screen and (max-width: 600px) {
   .services .food img {
     width: 70px; }

@@ -469,6 +469,17 @@ $btnp_text : #FFF;
   }
 }
 
+.summary{
+  .collection{
+    .collection-item{
+      span{
+        width:30%;
+        display: inline-block;
+      }
+    }
+  }
+}
+
 @media #{$small-and-down} {
   .services{
     .food{
